@@ -2,7 +2,7 @@
   <div class="movie-catalog">
     <movie-preloader v-if="show" />
     <movie-catalog-film
-      v-for="(movie, index) in movieList.data"
+      v-for="(movie, index) in this.$store.state.films.data"
       :key="index"
       :title="movie.title"
       :year="movie.year"
@@ -20,6 +20,7 @@
 import MovieCatalogFilm from "./movie-catalog-film.vue";
 import MoviePreloader from "./movie-preloader.vue";
 import axios from "axios";
+import { mapActions } from "vuex";
 
 export default {
   name: "movie-catalog",
@@ -43,9 +44,13 @@ export default {
       });
   },
   methods: {
+    ...mapActions(["GET_FILMS_FROM_API"]),
     showMovie(index) {
       console.log(index);
     },
+  },
+  mounted() {
+    this.GET_FILMS_FROM_API();
   },
 };
 </script>
