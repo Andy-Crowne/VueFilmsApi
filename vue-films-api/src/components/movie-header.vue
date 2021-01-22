@@ -6,9 +6,8 @@
 
 <script>
 export default {
-  name: "movie-header",
+  name: "movie-header"
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

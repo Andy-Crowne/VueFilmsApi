@@ -1,17 +1,17 @@
 <template>
   <div id="app">
     <movie-header />
-    <router-view />
+    <main-view />
   </div>
 </template>
 
 <script>
 import MovieHeader from "./components/movie-header.vue";
+import MainView from "./views/MainView";
 export default {
   name: "app",
-  components: { MovieHeader },
+  components: { MainView, MovieHeader }
 };
 </script>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>

@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: "movie-search",
+  name: "movie-search"
 };
 </script>
 

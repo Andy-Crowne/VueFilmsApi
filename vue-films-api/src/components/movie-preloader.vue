@@ -10,9 +10,9 @@ export default {
   name: "movie-preloader",
   data() {
     return {
-      preloader,
+      preloader
     };
-  },
+  }
 };
 </script>
 
